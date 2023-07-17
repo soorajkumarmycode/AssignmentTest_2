@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.assignmenttest_1.R
 import com.example.assignmenttest_1.databinding.ActivityMainBinding
 import com.example.assignmenttest_1.network.RetrofitService
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         viewModel = ViewModelProvider(this, MyViewModelFactory(MainRepository(retrofitService)))[MainViewModel::class.java]
+        binding.recycleview.layoutManager = LinearLayoutManager(this)
 
         viewModel.productsList.observe(this, Observer {
             Log.d(TAG, "onCreate: $it")

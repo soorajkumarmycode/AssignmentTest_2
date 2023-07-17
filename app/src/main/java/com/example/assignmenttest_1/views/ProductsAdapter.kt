@@ -2,6 +2,7 @@ package com.example.assignmenttest_1.views
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.assignmenttest_1.databinding.ProductsItemRowLayoutBinding
@@ -32,6 +33,8 @@ class ProductsAdapter : RecyclerView.Adapter<MainViewHolder>() {
             .load(product.images)
             .error(product.thumbnail)
             .into(holder.binding.productImageView)
+
+     
 
     }
     override fun getItemCount(): Int {
