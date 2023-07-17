@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel = ViewModelProvider(this, MyViewModelFactory(MainRepository(retrofitService)))[MainViewModel::class.java]
         binding.recycleview.layoutManager = LinearLayoutManager(this)
-
         viewModel.productsList.observe(this, Observer {
             Log.d(TAG, "onCreate: $it")
             binding.recycleview.adapter = adapter
