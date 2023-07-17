@@ -1,2 +1,2 @@
 # AssignmentTest_2
-That is Copywrite
+That is sample code 
