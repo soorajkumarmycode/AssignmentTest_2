@@ -34,7 +34,7 @@ class ProductsAdapter : RecyclerView.Adapter<MainViewHolder>() {
             .error(product.thumbnail)
             .into(holder.binding.productImageView)
 
-     
+
 
     }
     override fun getItemCount(): Int {
